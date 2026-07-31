@@ -188,6 +188,16 @@
     font-size:13.5px !important;
     white-space:nowrap;
   }
+  .nav-cta-ghost{
+    background: transparent;
+    color: var(--pine) !important;
+    border: 1px solid var(--pine);
+    padding: 9px 17px;
+    border-radius: 2px;
+    font-size:13.5px !important;
+    white-space:nowrap;
+  }
+  .nav-cta-ghost:hover{ background: var(--pine); color: var(--white) !important; }
   .nav-toggle{display:none;}
   @media (max-width:900px){
     nav ul{display:none;}
@@ -1312,7 +1322,7 @@
   .skip-link:focus{top:16px;}
   :focus-visible{outline:3px solid var(--gold-light); outline-offset:3px;}
   a, button{touch-action:manipulation;}
-  .btn, .nav-cta, .loc-actions a{min-height:44px; justify-content:center;}
+  .btn, .nav-cta, .nav-cta-ghost, .loc-actions a{min-height:44px; justify-content:center;}
   .nav-toggle{cursor:pointer; min-width:44px; min-height:44px;}
   .nav-toggle span{display:block; width:20px; height:2px; background:currentColor; margin:4px auto;}
   @media (max-width:900px){
@@ -1327,7 +1337,7 @@
     nav ul.is-open li{border-bottom:1px solid var(--line);}
     nav ul.is-open li:last-child{border-bottom:0; padding-top:10px;}
     nav ul.is-open a{display:block; padding:12px 2px; font-size:16px;}
-    nav ul.is-open .nav-cta{text-align:center; padding:12px 18px;}
+    nav ul.is-open .nav-cta, nav ul.is-open .nav-cta-ghost{text-align:center; padding:12px 18px;}
   }
   @media (max-width:560px){
     .wrap{padding-left:20px; padding-right:20px;}
@@ -1466,7 +1476,7 @@
     .svc, .svc-list, .provider-card, .article-card, .post-card, .check-item,
     .protect-card, .disease-card, .billing-card, .focus-panel,
     .loc-photo img, .provider-photo img, .hero-photo img,
-    .btn, .nav-cta, .loc-actions a, .loc-card{ transition:none !important; transform:none !important; }
+    .btn, .nav-cta, .nav-cta-ghost, .loc-actions a, .loc-card{ transition:none !important; transform:none !important; }
   }
 
   /* ---------- ELEVATION LAYER (complements the motion block above) ---------- */
@@ -1477,13 +1487,13 @@
   header.scrolled{ box-shadow: 0 6px 24px rgba(29,43,38,.09); }
 
   @media (min-width:901px){
-    nav ul a:not(.nav-cta){ position:relative; }
-    nav ul a:not(.nav-cta)::after{
+    nav ul a:not(.nav-cta):not(.nav-cta-ghost){ position:relative; }
+    nav ul a:not(.nav-cta):not(.nav-cta-ghost)::after{
       content:""; position:absolute; left:0; right:100%; bottom:-6px;
       height:2px; background: var(--gold); transition: right .25s ease;
     }
-    nav ul a:not(.nav-cta):hover::after,
-    nav ul a:not(.nav-cta).active::after{ right:0; }
+    nav ul a:not(.nav-cta):not(.nav-cta-ghost):hover::after,
+    nav ul a:not(.nav-cta):not(.nav-cta-ghost).active::after{ right:0; }
     nav ul a.active{ color: var(--pine); }
     nav .dropdown-menu a::after{ display:none; }
   }
@@ -1551,6 +1561,7 @@
 <li><a href="#news">News</a></li>
 <li><a href="#patients">Patients</a></li>
 <li><a href="#billing">Billing</a></li>
+<li><a aria-label="Open Patient Portal (opens in a new tab)" class="nav-cta-ghost" href="https://mycw104.ecwcloud.com/portal14112/jsp/login.jsp" rel="noopener" target="_blank">Patient Portal</a></li>
 <li><a class="nav-cta" href="#locations">Contact</a></li>
 </ul>
 </nav>
@@ -2586,7 +2597,7 @@
   }
 
   const links = [...document.querySelectorAll('nav ul a[href^="#"]')]
-    .filter(a => a.getAttribute('href').length > 1 && !a.classList.contains('nav-cta'));
+    .filter(a => a.getAttribute('href').length > 1 && !a.classList.contains('nav-cta') && !a.classList.contains('nav-cta-ghost'));
   const map = new Map();
   links.forEach(a => {
     const sec = document.querySelector(a.getAttribute('href'));
