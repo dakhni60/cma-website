@@ -145,31 +145,32 @@
   .brand{
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size: 20px;
+    font-size: 27px;
     color: var(--pine);
     letter-spacing:-0.01em;
     display:flex;
     flex-direction:column;
+    flex-shrink:0;
     line-height:1.05;
+    white-space:nowrap;
   }
   .brand span{
     font-family:'IBM Plex Mono', monospace;
-    font-size:10px;
+    font-size:13px;
     letter-spacing:0.1em;
     text-transform:uppercase;
     color:var(--deepblue);
     font-weight:600;
-    margin-top:4px;
-    white-space: nowrap;
+    white-space: normal;
+    max-width: 260px;
   }
-  @media (max-width:700px){
-    .brand span{ white-space:normal; max-width:220px; }
-  }
+  .brand-spec:first-of-type{ margin-top:8px; }
+  .brand-spec + .brand-spec{ margin-top:3px; }
   .brand-loc{
     color: var(--ink-soft) !important;
     font-weight:500 !important;
     letter-spacing:0.08em !important;
-    margin-top:2px !important;
+    margin-top:8px !important;
   }
   nav ul{
     list-style:none; display:flex; gap: 28px;
@@ -1345,7 +1346,7 @@
   @media (max-width:560px){
     .wrap{padding-left:20px; padding-right:20px;}
     .nav-inner{padding:13px 20px;}
-    .brand{font-size:18px; max-width:245px;}
+    .brand{font-size:23px; max-width:245px;}
     .hero-noimg{padding:0 16px;}
     .hero-noimg .hero-copy{padding:70px 20px 58px;}
     .hero-name{font-size:clamp(2.2rem,11vw,3rem);}
@@ -1536,8 +1537,10 @@
 <header>
 <div class="nav-inner">
 <a aria-label="Central Medical Associates home" class="brand" href="#main-content">Central Medical Associates
-      <span>Primary Care · Addiction Medicine · Mental Health</span>
-<span class="brand-loc">Elizabethtown &amp; Radcliff, KY</span>
+      <span class="brand-spec">Primary Care</span>
+<span class="brand-spec">Addiction Medicine</span>
+<span class="brand-spec">Mental Health</span>
+<span class="brand-loc">Elizabethtown &amp; Radcliff</span>
 </a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu" class="nav-toggle" type="button">
 <span></span><span></span><span></span>
