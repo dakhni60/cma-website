@@ -143,6 +143,18 @@
     gap: 20px;
   }
   .brand{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:14px;
+    flex-shrink:0;
+  }
+  .brand-logo{
+    height:54px;
+    width:auto;
+    flex-shrink:0;
+  }
+  .brand-text{
     font-family:'Fraunces', serif;
     font-weight:600;
     font-size: 27px;
@@ -150,11 +162,10 @@
     letter-spacing:-0.01em;
     display:flex;
     flex-direction:column;
-    flex-shrink:0;
     line-height:1.05;
     white-space:nowrap;
   }
-  .brand span{
+  .brand-text span{
     font-family:'IBM Plex Mono', monospace;
     font-size:13px;
     letter-spacing:0.1em;
@@ -1248,7 +1259,8 @@
   @media (max-width:560px){
     .wrap{padding-left:20px; padding-right:20px;}
     .nav-inner{padding:13px 20px;}
-    .brand{font-size:23px; max-width:245px;}
+    .brand-text{font-size:23px; max-width:245px;}
+    .brand-logo{height:42px;}
     section{padding:68px 0;}
     .factstrip .wrap{grid-template-columns:1fr; gap:0; padding:12px 20px;}
     .fact,.fact:first-child,.fact:nth-child(3){border-left:0; border-bottom:1px solid rgba(241,243,236,.18); padding:18px 0;}
@@ -1435,11 +1447,14 @@
 </div>
 <header>
 <div class="nav-inner">
-<a aria-label="Central Medical Associates home" class="brand" href="#main-content">Central Medical Associates
-      <span class="brand-spec">Primary Care</span>
+<a aria-label="Central Medical Associates home" class="brand" href="#main-content">
+<img class="brand-logo" src="assets/img/cma-logo.png" alt="Central Medical Associates logo"/>
+<span class="brand-text">Central Medical Associates
+<span class="brand-spec">Primary Care</span>
 <span class="brand-spec">Addiction Medicine</span>
 <span class="brand-spec">Mental Health</span>
 <span class="brand-loc">Elizabethtown &amp; Radcliff</span>
+</span>
 </a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu" class="nav-toggle" type="button">
 <span></span><span></span><span></span>
