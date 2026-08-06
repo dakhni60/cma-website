@@ -256,83 +256,6 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero{
-    display:grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items:stretch;
-    border-bottom: 1px solid var(--line);
-  }
-  .hero-copy{
-    padding: 96px 56px 72px 32px;
-    display:flex; flex-direction:column; justify-content:center;
-    max-width: 620px;
-  }
-  .hero-noimg{
-    grid-template-columns: 1fr;
-    justify-items:center;
-    text-align:center;
-    padding: 0 32px;
-  }
-  .hero-noimg .hero-copy{
-    max-width: 960px;
-    padding: 110px 40px 88px;
-    align-items:center;
-    background: rgba(216,235,244,0.78);
-    backdrop-filter: blur(3px);
-    border-radius: 4px;
-  }
-  .hero-noimg .hero-actions{ justify-content:center; }
-  .hero-noimg .eyebrow{ justify-content:center; color: var(--deepblue); }
-  .hero-noimg .eyebrow::before{ display:none; }
-  .hero-bg{
-    background-size: cover;
-    background-position: center 28%;
-    background-repeat: no-repeat;
-  }
-  .hero-name{
-    font-family:'Fraunces', serif;
-    font-size: clamp(2.6rem, 5vw, 4.2rem);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: var(--pine);
-    margin-bottom: 20px;
-    line-height: 1.05;
-  }
-  .hero-subname{
-    font-family:'Fraunces', serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: clamp(1.15rem, 2vw, 1.5rem);
-    color: var(--deepblue);
-    margin: -10px 0 22px;
-    letter-spacing: 0.005em;
-  }
-  .hero-copy h1{
-    font-size: clamp(2.4rem, 4vw, 3.5rem);
-    margin: 18px 0 22px;
-  }
-  .tagline{
-    font-family:'Fraunces', serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 19px;
-    color: var(--gold);
-    margin: -6px 0 24px;
-    letter-spacing: 0.005em;
-  }
-  .hero-copy h1 em{
-    font-style:italic;
-    color: var(--gold);
-  }
-  .hero-copy p{
-    font-size: 18px;
-    color: var(--ink-soft);
-    max-width: 480px;
-    margin-bottom: 34px;
-  }
-  .hero-noimg .hero-copy p{
-    max-width: 720px;
-  }
   .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
   .btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -349,59 +272,18 @@
   .btn-ghost{ background:transparent; color:var(--pine); border:1px solid var(--pine); }
   .btn-ghost:hover{ background: var(--pine); color:var(--white); }
 
-  .hero-photo{
-    position:relative;
-    overflow:hidden;
-    min-height: 460px;
-  }
-  .hero-photo img{
-    width:100%; height:100%; object-fit:cover;
-    position:absolute; inset:0;
-  }
-  .hero-photo-tag{
-    position:absolute; left:0; bottom:0;
-    background: var(--pine);
-    color: var(--white);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    letter-spacing:0.08em;
-    padding: 10px 16px;
-  }
-  .hero-roster{
-    position:absolute; top:0; right:0;
-    max-width: 78%;
-    background: rgba(29,43,38,0.86);
-    backdrop-filter: blur(2px);
-    padding: 20px 22px 18px;
-  }
-  .hero-roster .eyebrow{
-    color: var(--gold-light);
-    margin-bottom: 12px;
-  }
-  .hero-roster .eyebrow::before{ background: var(--gold-light); }
-  .hero-roster ul{
-    list-style:none;
-    columns: 2;
-    column-gap: 20px;
-  }
-  .hero-roster li{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 11.5px;
-    letter-spacing:0.02em;
-    color: var(--paper);
-    padding: 3px 0;
-    break-inside: avoid;
-    white-space: nowrap;
-  }
+  .hero-e{ padding:104px 32px 80px; border-bottom:1px solid var(--line); background:var(--pine); }
+  .hero-e-inner{ max-width:900px; margin:0 auto; }
+  .hero-e-eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-light); font-weight:600; display:flex; align-items:center; gap:10px; }
+  .hero-e-eyebrow::before{ content:""; width:30px; height:1px; background:var(--gold-light); display:inline-block; }
+  .hero-e-title{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:clamp(1.9rem,3.6vw,3.1rem); line-height:1.28; color:var(--white); margin:28px 0 26px; letter-spacing:-0.01em; }
+  .hero-e-title span{ color:var(--gold-light); }
+  .hero-e-tagline{ font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:.05em; color:var(--gold-light); margin-bottom:20px; }
+  .hero-e-desc{ font-family:'Source Sans 3',sans-serif; font-size:17px; color:rgba(241,243,236,.82); max-width:640px; margin-bottom:36px; }
+  .hero-e .btn-ghost{ color:var(--white); border-color:rgba(241,243,236,.5); }
+  .hero-e .btn-ghost:hover{ background:var(--white); color:var(--pine); }
   @media (max-width:900px){
-    .hero-roster{ max-width:100%; position:static; }
-    .hero-roster ul{ columns:2; }
-  }
-
-  @media (max-width:900px){
-    .hero{grid-template-columns:1fr;}
-    .hero-copy{padding:56px 24px 40px; max-width:none;}
-    .hero-photo{min-height:320px;}
+    .hero-e{ padding:64px 24px 56px; }
   }
 
   /* ---------- STAT / FACT STRIP ---------- */
@@ -1347,9 +1229,6 @@
     .wrap{padding-left:20px; padding-right:20px;}
     .nav-inner{padding:13px 20px;}
     .brand{font-size:23px; max-width:245px;}
-    .hero-noimg{padding:0 16px;}
-    .hero-noimg .hero-copy{padding:70px 20px 58px;}
-    .hero-name{font-size:clamp(2.2rem,11vw,3rem);}
     section{padding:68px 0;}
     .factstrip .wrap{grid-template-columns:1fr; gap:0; padding:12px 20px;}
     .fact,.fact:first-child,.fact:nth-child(3){border-left:0; border-bottom:1px solid rgba(241,243,236,.18); padding:18px 0;}
@@ -1444,11 +1323,11 @@
     transform: translateY(-2px);
   }
 
-  .loc-photo, .provider-photo, .hero-photo{ overflow:hidden; }
-  .loc-photo img, .provider-photo img, .hero-photo img{
+  .loc-photo, .provider-photo{ overflow:hidden; }
+  .loc-photo img, .provider-photo img{
     transition: transform .6s cubic-bezier(.2,.7,.3,1);
   }
-  .loc-photo:hover img, .provider-photo:hover img, .hero-photo:hover img{
+  .loc-photo:hover img, .provider-photo:hover img{
     transform: scale(1.06);
   }
 
@@ -1479,7 +1358,7 @@
   @media (prefers-reduced-motion: reduce){
     .svc, .svc-list, .provider-card, .article-card, .post-card, .check-item,
     .protect-card, .disease-card, .billing-card, .focus-panel,
-    .loc-photo img, .provider-photo img, .hero-photo img,
+    .loc-photo img, .provider-photo img,
     .btn, .nav-cta, .nav-cta-ghost, .loc-actions a, .loc-card{ transition:none !important; transform:none !important; }
   }
 
@@ -1582,16 +1461,14 @@
 </aside>
 <main id="main-content">
 <!-- HERO -->
-<div class="hero hero-noimg hero-bg" style="background-image: linear-gradient(rgba(179,214,230,0.82), rgba(179,214,230,0.82)), url('assets/img/hero.jpg');">
-<div class="hero-copy">
-<div class="hero-name">Central Medical Associates</div>
-<div class="hero-subname">Quality Primary Care</div>
-<div class="eyebrow">Independent &amp; physician-led since 2016</div>
-<h1>Comprehensive care, <em>under one roof</em>, for every generation.</h1>
-<p class="tagline">Patients are central to our mission.</p>
-<p>Central Medical Associates brings primary care, on-site diagnostics and laboratory services, and mental health care together across five Hardin County locations — plus telehealth visits — unbound by outside interests, and driven solely by what's best for our patients.</p>
+<div class="hero-e">
+<div class="hero-e-inner">
+<div class="hero-e-eyebrow">Independent &amp; physician-led since 2016</div>
+<h1 class="hero-e-title">Central Medical Associates<br><span>Quality Primary Care</span></h1>
+<p class="hero-e-tagline">// Patients are central to our mission.</p>
+<p class="hero-e-desc">Central Medical Associates brings primary care, on-site diagnostics and laboratory services, and mental health care together across five Hardin County locations — plus telehealth visits — unbound by outside interests, and driven solely by what's best for our patients.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#providers">Meet Our Clinicians</a>
+<a class="btn btn-primary" href="#providers" style="background:var(--gold); color:var(--pine);">Meet Our Clinicians</a>
 <a class="btn btn-ghost" href="#patients">Patient Portal</a>
 </div>
 </div>
