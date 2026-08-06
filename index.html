@@ -148,6 +148,7 @@
     align-items:center;
     gap:14px;
     flex-shrink:0;
+    text-decoration:none;
   }
   .brand-logo{
     height:88px;
@@ -175,8 +176,10 @@
     white-space: normal;
     max-width: 260px;
   }
+  .brand-text .brand-spec{ white-space:nowrap; }
   .brand-spec:first-of-type{ margin-top:8px; }
   .brand-spec + .brand-spec{ margin-top:3px; }
+  .brand-spec::before{ content:"•"; color:var(--gold); margin-right:6px; }
   .brand-loc{
     color: var(--ink-soft) !important;
     font-weight:500 !important;
@@ -1261,6 +1264,7 @@
     .nav-inner{padding:13px 14px 13px 6px; gap:8px;}
     .brand{gap:8px;}
     .brand-text{font-size:18px; max-width:165px;}
+    .brand-text span{font-size:10.5px; letter-spacing:0.04em;}
     .brand-logo{height:46px;}
     section{padding:68px 0;}
     .factstrip .wrap{grid-template-columns:1fr; gap:0; padding:12px 20px;}
