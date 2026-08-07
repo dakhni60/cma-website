@@ -545,6 +545,7 @@
     font-size: 21px;
     margin-bottom: 14px;
   }
+  .loc-phones{ margin-bottom: 14px; }
   .loc-addr{
     font-family:'IBM Plex Mono', monospace;
     font-size: 13.5px;
@@ -584,10 +585,7 @@
     color: #000;
     margin-bottom: 6px;
   }
-  .loc-groups .grp-name .phone{
-    font-size: 1em;
-    font-weight: 700;
-  }
+  .loc-groups .grp-phone{ margin-bottom: 8px; }
   .loc-groups .grp-people{ font-size:15px; color: var(--ink); }
   .loc-groups .grp-people span{ display:block; padding:1px 0; }
   .loc-actions{ display:flex; gap:12px; flex-wrap:wrap; }
@@ -1300,9 +1298,7 @@
     color: #000000 !important;
     text-transform: none !important;
   }
-  #locations .loc-groups .grp-name,
-  #locations .loc-groups .grp-name a,
-  #locations .loc-groups .grp-name .phone {
+  #locations .loc-groups .grp-name {
     font-size: 17px !important;
     font-weight: 800 !important;
     color: #000000 !important;
@@ -1832,7 +1828,8 @@
 <div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
 <div class="loc-groups">
 <div class="grp">
-<div class="grp-name">CMA — Quadri, Suite 105 · <span class="phone"><a aria-label="Call 270‑769‑0892" class="phone" href="tel:+12707690892">270‑769‑0892</a></span></div>
+<div class="grp-name">CMA — Quadri, Suite 105</div>
+<div class="grp-phone"><a aria-label="Call 270‑769‑0892" class="phone" href="tel:+12707690892">270‑769‑0892</a></div>
 <div class="grp-people">
 <span>Syed Quadri, MD, FACP</span>
 <span>Beth Morrow, PA-C</span>
@@ -1840,7 +1837,8 @@
 </div>
 </div>
 <div class="grp">
-<div class="grp-name">CMA — Nasir, Suite 101 · <span class="phone"><a aria-label="Call 270‑900‑4555" class="phone" href="tel:+12709004555">270‑900‑4555</a></span></div>
+<div class="grp-name">CMA — Nasir, Suite 101</div>
+<div class="grp-phone"><a aria-label="Call 270‑900‑4555" class="phone" href="tel:+12709004555">270‑900‑4555</a></div>
 <div class="grp-people">
 <span>Mujahid Nasir, MD</span>
 </div>
@@ -1862,7 +1860,8 @@
 <div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
 <div class="loc-groups">
 <div class="grp">
-<div class="grp-name">CMA — Ahmed, Suite 107 · <span class="phone"><a aria-label="Call 270‑986‑7392" class="phone" href="tel:+12709867392">270‑986‑7392</a></span></div>
+<div class="grp-name">CMA — Ahmed, Suite 107</div>
+<div class="grp-phone"><a aria-label="Call 270‑986‑7392" class="phone" href="tel:+12709867392">270‑986‑7392</a></div>
 <div class="grp-people">
 <span>Ayaz Ahmed, MD, FACP</span>
 <span>Tanya Revor, APRN</span>
@@ -1870,13 +1869,15 @@
 </div>
 </div>
 <div class="grp">
-<div class="grp-name">CMA — Psychiatry, Suite 105 · <span class="phone"><a aria-label="Call 270-982-2002" class="phone" href="tel:2709822002">270-982-2002</a></span></div>
+<div class="grp-name">CMA — Psychiatry, Suite 105</div>
+<div class="grp-phone"><a aria-label="Call 270-982-2002" class="phone" href="tel:2709822002">270-982-2002</a></div>
 <div class="grp-people">
 <span>Nancy Allen, PMHNP, FNP</span>
 </div>
 </div>
 <div class="grp">
-<div class="grp-name">CMA — Labs, Suite 105 · <span class="phone"><a aria-label="Call 270‑982‑2027" class="phone" href="tel:+12709822027">270‑982‑2027</a></span></div>
+<div class="grp-name">CMA — Labs, Suite 105</div>
+<div class="grp-phone"><a aria-label="Call 270‑982‑2027" class="phone" href="tel:+12709822027">270‑982‑2027</a></div>
 <div class="grp-people">
 <span>On-site laboratory &amp; diagnostic services</span>
 </div>
@@ -1894,7 +1895,8 @@
 <div class="loc-info">
 <span class="campus">Elizabethtown</span>
 <h3>Family Healing and Health — FHH</h3>
-<div class="loc-addr"><strong>5900 N Dixie Highway</strong>Elizabethtown, KY 42701<br/><span class="phone"><a aria-label="Call 270‑737‑1215" class="phone" href="tel:+12707371215">270‑737‑1215</a></span></div>
+<div class="loc-phones"><a aria-label="Call 270‑737‑1215" class="phone" href="tel:+12707371215">270‑737‑1215</a></div>
+<div class="loc-addr"><strong>5900 N Dixie Highway</strong>Elizabethtown, KY 42701</div>
 <div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
 <div class="loc-groups">
 <div class="grp">
@@ -1916,7 +1918,8 @@
 <div class="loc-info">
 <span class="campus">Radcliff</span>
 <h3>CMA — Movania</h3>
-<div class="loc-addr"><strong>700 W Lincoln Trail Blvd</strong>Radcliff, KY 40160<br/><span class="phone"><a aria-label="Call 270‑351‑3192" class="phone" href="tel:+12703513192">270‑351‑3192</a></span></div>
+<div class="loc-phones"><a aria-label="Call 270‑351‑3192" class="phone" href="tel:+12703513192">270‑351‑3192</a></div>
+<div class="loc-addr"><strong>700 W Lincoln Trail Blvd</strong>Radcliff, KY 40160</div>
 <div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
 <div class="loc-groups">
 <div class="grp">
