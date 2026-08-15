@@ -5,37 +5,54 @@ Custom domain: cmahardin.com (once DNS is connected; otherwise the *.github.io/c
 
 ## What this is
 
-A single-page static website for Central Medical Associates, a physician-led primary care
-group in Elizabethtown & Radcliff, Kentucky. The entire site is **one file: `index.html`**
-(inline CSS + JS, no build step, no frameworks, no dependencies). Photos live in `assets/img/`.
+A multi-page static website for Central Medical Associates, a physician-led primary care
+group in Elizabethtown & Radcliff, Kentucky. **No build step, no frameworks, no dependencies,
+no templating** — each `.html` file is a complete, standalone document with its own inline
+`<style>` block and `<script>` tags. Photos live in `assets/img/`.
+
+## Pages
+
+- `index.html` — Home: hero, fact strip, About (`#about`), Mission, Services (`#services`)
+- `clinicians.html` — 12 clinician cards with expandable bios
+- `locations.html` — 5 offices w/ Google Maps embeds
+- `patients.html` — visit prep + patient portal
+- `health-library.html` — patient-education articles
+- `news.html` — announcements
+- `billing.html` — payment policies
+- `heat-exhaustion.html` — current seasonal "Focus On" deep-dive
+- `tick-bites.html` — previous seasonal "Focus On" deep-dive
+
+Every page shares the same header (top-bar, nav, announcement bar) and footer, copy-pasted
+into each file — **there is no shared include/template**. About and Services are the only
+sections that still live on a single page and are linked to via anchor (`index.html#about`);
+everything else is a real page. The nav's "Focus On…" item is a dropdown pointing at whichever
+files are the current/previous topics — when the season changes, retire the old topic to a
+differently-named file (or update it in place) and repoint the dropdown + "Current feature" /
+"Previous topic" kickers.
 
 ## How to make edits
 
-1. Edit `index.html` directly (content is plain HTML; CSS is in the single `<style>` block).
+1. Edit the relevant `.html` file directly (content is plain HTML; CSS is in that file's
+   `<style>` block). **If the edit touches the shared header, nav, footer, or the JS at the
+   bottom, apply it to all 9 files** — grep for the string you're changing across `*.html` to
+   find every copy.
 2. Commit and push to `main`. GitHub Pages redeploys automatically — verify at the live URL
    about a minute later. There is no build command; what you push is what serves.
 3. Preview locally with `python3 -m http.server 8000` and open http://localhost:8000.
-
-## Page map (section ids)
-
-`#about` story + timeline · `#services` 3 service cards + full tag list · `#locations`
-5 offices w/ Google Maps embeds · `#providers` 12 clinician cards with expandable bios ·
-`#patients` visit prep · `#health-library` patient-education articles · `#news` announcements ·
-`#billing` payment policies · `#heat-exhaustion` + `#focus-on` seasonal "Focus On" deep-dives
-(current + previous topic) · footer = contact + affiliations. The gold announcement bar sits
-under the nav. The nav's "Focus On…" item is a dropdown listing the Focus On topics — when
-adding a new topic, add a new section AND a link in the dropdown menu (`#focus-dropdown`).
+4. If you add, rename, or remove a page, update the nav on all 9 pages, `sitemap.xml`, and
+   the page list above.
 
 ## Common tasks
 
-- **Update a bio**: find the clinician's `<div class="provider-card">` in `#providers`;
+- **Update a bio**: find the clinician's `<div class="provider-card">` in `clinicians.html`;
   the bio is inside `<details><div class="bio">`. (Spelling note: it's Carrie **Westbrook**.)
-- **Add a news post**: copy an existing `<div class="post-card">` in `#news`.
-- **Add a health article**: copy an `<div class="article-card">` in `#health-library`.
-- **Change the announcement bar**: edit `.announce-text` near the top of `<body>`.
-- **Add a "Focus On" topic**: copy an existing focus section (e.g. `#heat-exhaustion`), give it
-  a new id, add it before the previous topics, and add its link to the nav dropdown
-  (`#focus-dropdown`) — move the old "Current feature" kicker to the new one.
+- **Add a news post**: copy an existing `<div class="post-card">` in `news.html`.
+- **Add a health article**: copy an `<div class="article-card">` in `health-library.html`.
+- **Change the announcement bar**: edit `.announce-text` near the top of `<body>` — on all
+  9 pages.
+- **Add a "Focus On" topic**: copy an existing focus page (e.g. `heat-exhaustion.html`) to a
+  new filename, update its content, then update the nav dropdown links and kickers
+  ("Current feature" / "Previous topic") on all 9 pages, and add the new file to `sitemap.xml`.
 - **Photos**: optimized JPEGs in `assets/img/providers/` (~700px) and `assets/img/locations/`
   (~1200px). Compress before adding (`sips -s format jpeg -s formatOptions 80 -Z 700 in.png --out out.jpg`).
   Never inline images as base64.
@@ -46,8 +63,10 @@ adding a new topic, add a new section AND a link in the dropdown menu (`#focus-d
   `--deepblue #1B3A5C` (info/billing thread), `--paper #F1F3EC` (ground).
 - Type: Fraunces (display), Source Sans 3 (body), IBM Plex Mono (labels/eyebrows) via Google Fonts.
 - Keep the flat/editorial look: 2px radii, 1px `--line` borders, mono uppercase eyebrows.
-- Interactions (scroll reveal, scrollspy, back-to-top) are in the `<script>` at the bottom
-  and respect `prefers-reduced-motion`.
+- Interactions (scroll reveal, nav active-page highlighting, back-to-top) are in the
+  `<script>` at the bottom of each page and respect `prefers-reduced-motion`. Nav highlighting
+  is page-based (matches the current filename), not scroll-based, since sections now live on
+  separate pages.
 
 ## Facts to keep consistent (single source of truth)
 
@@ -65,6 +84,7 @@ adding a new topic, add a new section AND a link in the dropdown menu (`#focus-d
 
 - This is a medical practice site: keep health content educational, sourced (CDC etc.),
   and keep the Health Library disclaimer intact. No specific medical advice.
-- Time-sensitive content to watch: the flu-vaccine announcement (dated Aug 1, 2026) in the
-  announcement bar, `#news`, and `#patients`; and the seasonal `#focus-on` topic.
-- `_previous-draft/` is an archived earlier multi-page version — ignore it; not deployed.
+- Time-sensitive content to watch: the flu-vaccine announcement in the announcement bar
+  (present on every page), `news.html`, and `patients.html`; and the seasonal Focus On topic
+  pages.
+- `_previous-draft/` is an unrelated archived early draft — ignore it; not deployed.
