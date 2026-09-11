@@ -4,17 +4,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Central Medical Associates provides physician-led primary care, addiction medicine, mental health services, diagnostics, and chronic care support in Elizabethtown and Radcliff, Kentucky." name="description"/>
+<meta content="What Lipoprotein(a) and Apolipoprotein B are, why they matter for heart disease risk, and who should ask about testing, from Central Medical Associates." name="description"/>
 <meta content="#24463F" name="theme-color"/>
-<meta content="Central Medical Associates | Elizabethtown &amp; Radcliff, KY" property="og:title"/>
-<meta content="Comprehensive, physician-led care for every generation across five convenient Kentucky locations." property="og:description"/>
-<link href="https://cmahardin.com/" rel="canonical"/>
-<meta content="https://cmahardin.com/" property="og:url"/>
+<meta content="Lipoprotein(a) &amp; Apolipoprotein B | Central Medical Associates" property="og:title"/>
+<meta content="Two cholesterol-related blood markers that a standard lipid panel can miss — and why national heart guidelines now recommend checking them." property="og:description"/>
+<link href="https://cmahardin.com/lipoprotein-a-apob.html" rel="canonical"/>
+<meta content="https://cmahardin.com/lipoprotein-a-apob.html" property="og:url"/>
 <meta content="https://cmahardin.com/assets/img/hero.jpg" property="og:image"/>
 <meta content="website" property="og:type"/>
-<title>Central Medical Associates | Elizabethtown &amp; Radcliff, KY</title>
+<title>Lipoprotein(a) &amp; Apolipoprotein B | Central Medical Associates</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2324463F'/><text x='50' y='70' font-size='54' font-family='Georgia' fill='%23F1F3EC' text-anchor='middle'>C</text></svg>">
-<link rel="preload" as="image" href="assets/img/hero.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,6 +34,16 @@
     {"@type": "MedicalClinic", "name": "CMA — Psychiatry", "telephone": "+1-270-982-2002", "address": {"@type": "PostalAddress", "streetAddress": "1321 Ring Road, Suite 105", "addressLocality": "Elizabethtown", "addressRegion": "KY", "postalCode": "42701"}},
     {"@type": "MedicalClinic", "name": "Family Healing and Health (FHH)", "telephone": "+1-270-737-1215", "address": {"@type": "PostalAddress", "streetAddress": "5900 N Dixie Highway", "addressLocality": "Elizabethtown", "addressRegion": "KY", "postalCode": "42701"}},
     {"@type": "MedicalClinic", "name": "CMA — Movania", "telephone": "+1-270-351-3192", "address": {"@type": "PostalAddress", "streetAddress": "700 W Lincoln Trail Blvd", "addressLocality": "Radcliff", "addressRegion": "KY", "postalCode": "40160"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cmahardin.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Lipoprotein(a) &amp; Apolipoprotein B", "item": "https://cmahardin.com/lipoprotein-a-apob.html"}
   ]
 }
 </script>
@@ -92,7 +101,7 @@
     font-size:12.5px;
     letter-spacing:0.14em;
     text-transform:uppercase;
-    color: #3A3A3A;
+    color: var(--gold);
     font-weight:600;
     display:flex;
     align-items:center;
@@ -252,7 +261,7 @@
     letter-spacing:0.08em;
     text-transform:uppercase;
     background: var(--white);
-    color: #3A3A3A;
+    color: var(--gold);
     padding: 3px 10px;
     border-radius: 2px;
     animation: announce-pulse 2.2s ease-in-out infinite;
@@ -317,10 +326,10 @@
   }
   .hero-e-inner{ position:relative; z-index:1; }
   .hero-e-inner{ max-width:900px; margin:0 auto; }
-  .hero-e-eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:16px; letter-spacing:.15em; text-transform:uppercase; color:#3E2723; font-weight:600; display:flex; align-items:center; gap:10px; }
+  .hero-e-eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:16px; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-light); font-weight:600; display:flex; align-items:center; gap:10px; }
   .hero-e-eyebrow::before{ content:""; width:30px; height:1px; background:var(--gold-light); display:inline-block; }
   .hero-e-title{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:clamp(1.9rem,3.6vw,3.1rem); line-height:1.28; color:var(--white); margin:28px 0 26px; letter-spacing:-0.01em; }
-  .hero-e-title span{ color:#B8B8B8; }
+  .hero-e-title span{ color:var(--gold-light); }
   .hero-e-tagline{ font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600; letter-spacing:.05em; color:#D2B48C; text-align:center; margin-bottom:20px; }
   .hero-e-desc{ font-family:'Source Sans 3',sans-serif; font-weight:500; font-size:17px; color:#FFFFFF; max-width:640px; margin-bottom:36px; }
   .hero-e .btn-ghost{ color:var(--white); border-color:rgba(241,243,236,.5); }
@@ -348,7 +357,7 @@
     font-family:'Fraunces', serif;
     font-size: 30px;
     font-weight:600;
-    color: #B8B8B8;
+    color: var(--gold-light);
     display:block;
   }
   .fact .lbl{
@@ -397,7 +406,7 @@
     font-family:'IBM Plex Mono', monospace;
     font-size: 15px;
     font-weight:600;
-    color: #3A3A3A;
+    color: var(--gold);
     padding-top:2px;
   }
   .tl-body h4{
@@ -432,7 +441,7 @@
     position:relative;
   }
   .mission .wrap{ max-width: 880px; }
-  .mission .eyebrow{color: #B8B8B8;}
+  .mission .eyebrow{color: var(--gold-light);}
   .mission .eyebrow::before{background:var(--gold-light);}
   .mission blockquote{
     font-family:'Fraunces', serif;
@@ -451,7 +460,7 @@
     font-size:12.5px;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    color: #B8B8B8;
+    color: var(--gold-light);
   }
 
   /* ---------- SERVICES ---------- */
@@ -1209,7 +1218,7 @@
     font-size:11.5px;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    color: #B8B8B8;
+    color: var(--gold-light);
     margin-bottom:14px;
   }
   .foot-bottom{
@@ -1507,146 +1516,62 @@
 </div>
 </aside>
 <main id="main-content">
-<!-- HERO -->
-<div class="hero-e">
-<div class="hero-e-inner">
-<div class="hero-e-eyebrow">Independent &amp; physician-led since 2016</div>
-<h1 class="hero-e-title">Central Medical Associates<br><span>Quality Primary Care</span></h1>
-<p class="hero-e-tagline">Patients are central to our mission.</p>
-<p class="hero-e-desc">Central Medical Associates brings primary care, on-site diagnostics and laboratory services, and mental health care together across five Hardin County locations — plus telehealth visits — unbound by outside interests, and driven solely by what's best for our patients.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="clinicians.html" style="background:var(--gold); color:var(--pine);">Meet Our Clinicians</a>
-<a class="btn btn-ghost" href="patients.html">Patient Portal</a>
-</div>
-</div>
-</div>
-<div class="factstrip">
+<section aria-labelledby="focus-on-heading" class="focus-on" id="focus-on">
 <div class="wrap">
-<div class="fact"><span class="num">5</span><span class="lbl">Locations — 4 in Elizabethtown, 1 in Radcliff</span></div>
-<div class="fact"><span class="num">12</span><span class="lbl">Physicians &amp; advanced practice clinicians</span></div>
-<div class="fact"><span class="num">2016</span><span class="lbl">Founded through four practices, joined as one</span></div>
-<div class="fact"><span class="num">On-site</span><span class="lbl">Full lab &amp; diagnostic suite</span></div>
-</div>
-</div>
-<!-- ABOUT -->
-<section id="about">
-<div class="wrap">
-<div class="about-grid">
+<div class="focus-hero">
 <div>
-<div class="section-head" style="margin-bottom:28px;">
-<div class="eyebrow">Our story</div>
-<h2>Four practices. One purpose.</h2>
-<p>Central Medical Associates was established in 2016 through the amalgamation of the practices of Dr. Movania, Dr. Ahmed, Dr. Quadri, and Dr. Nasir. The goal was simple: consolidate resources and expand our capabilities to comprehensively serve our patients under one roof.</p>
-</div>
-<p style="color:var(--ink-soft); font-size:15.5px; max-width:520px;">While changes in the clinical landscape have since led us to step away from rehabilitation and radiology services, our commitment to comprehensive care remains. Today, alongside dedicated primary care, we continue to offer robust diagnostic and laboratory services — and we're proud to have recently expanded into mental health care.</p>
-</div>
-<div class="timeline">
-<div class="tl-row">
-<div class="tl-year">2016</div>
-<div class="tl-body">
-<h4>Central Medical Associates is founded</h4>
-<p>Drs. Movania, Ahmed, Quadri, and Nasir combine their independent practices into one group, consolidating resources to better serve patients.</p>
+<div class="eyebrow">Focus On…</div>
+<h1 id="focus-on-heading">Lipoprotein(a) &amp; Apolipoprotein B: What Your Cholesterol Panel Might Miss</h1>
+<p class="focus-lead"><strong>A standard cholesterol test doesn't always tell the whole story.</strong> Two additional blood markers — Lipoprotein(a), or Lp(a), and Apolipoprotein B, or ApoB — are drawing new attention in national heart-health guidelines because they can reveal heart disease risk that routine testing can miss.</p>
+<div class="focus-meta">
+<span>Heart health</span>
+<span>Preventive cardiology</span>
+<span>Brief patient guide</span>
 </div>
 </div>
-<div class="tl-row">
-<div class="tl-year">Since</div>
-<div class="tl-body">
-<h4>A focus on what matters most</h4>
-<p>As the clinical landscape changed, CMA stepped away from rehabilitation and radiology services to sharpen its focus on primary care and diagnostics.</p>
+<aside aria-label="Key advice about Lp(a) and ApoB testing" class="focus-alert">
+<span class="label">Ask your clinician</span>
+<strong>Most adults should have Lp(a) checked at least once.</strong>
+<p>Unlike routine cholesterol, Lp(a) only needs to be measured one time in your life — it's set by your genes and generally doesn't change afterward.</p>
+</aside>
+</div>
+<div class="focus-panel">
+<h3>What are Lp(a) and ApoB?</h3>
+<div class="protect-grid">
+<article class="protect-card">
+<h4>Lipoprotein(a) — Lp(a)</h4>
+<p>Lp(a) is a cholesterol-carrying particle whose level is set almost entirely by your genes — diet, exercise, and weight loss have little effect on it. A high Lp(a) raises the risk of heart attack and stroke on its own, separate from your regular cholesterol numbers, which is why it's sometimes called a "hidden" risk factor.</p>
+</article>
+<article class="protect-card">
+<h4>Apolipoprotein B — ApoB</h4>
+<p>ApoB is a protein found on every particle that can build up in artery walls, including LDL ("bad" cholesterol). Measuring ApoB counts the actual number of these particles circulating in your blood, which some experts consider a more precise risk marker than the LDL number alone.</p>
+</article>
 </div>
 </div>
-<div class="tl-row">
-<div class="tl-year">Today</div>
-<div class="tl-body">
-<h4>Primary care, labs, and now mental health</h4>
-<p>CMA offers comprehensive primary care at two locations, a full on-site lab and diagnostic suite in Elizabethtown, and a growing mental health service line.</p>
-</div>
-</div>
-<div class="tl-row" style="border-bottom:none;">
-<div class="tl-year">Recently</div>
-<div class="tl-body">
-<h4>Welcoming new clinicians</h4>
-<p>CMA is honored to have recently welcomed Patricia Williams, APRN — the most experienced Nurse Practitioner in Hardin County — and Kelly Keplinger Page, APRN, to the growing practice.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- MISSION -->
-<div class="mission">
-<div class="wrap">
-<div class="eyebrow">Our mission</div>
-<blockquote>“Central Medical Associates is an independent primary care practice dedicated to serving patients across every generation. Our mission is to provide compassionate, comprehensive care with a specialized focus on managing complex chronic conditions. Unbound by outside interests, our clinical decisions are driven solely by what is best for our patients.”</blockquote>
-<cite>Central Medical Associates — Mission Statement</cite>
-</div>
-</div>
-<!-- SERVICES -->
-<section class="alt" id="services">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">What we offer</div>
-<h2>Care built around the whole patient.</h2>
-<p>From routine wellness to the ongoing management of complex chronic conditions, our clinicians work as one team across every location.</p>
-</div>
-<div class="services-grid">
-<div class="svc">
-<div class="eyebrow">01 — Primary Care</div>
-<h3>Family &amp; Internal Medicine</h3>
-<p>Comprehensive primary care for patients of every age, from pediatric wellness to geriatric support.</p>
+<div class="focus-panel">
+<h3>Who should ask about testing</h3>
 <ul>
-<li>Annual wellness exams &amp; sports physicals</li>
-<li>Chronic disease management</li>
-<li>Acute &amp; sick visits</li>
-<li>Geriatric &amp; addiction medicine</li>
-<li>Telehealth visits available</li>
+<li>Anyone with a family history of early heart attack or stroke (generally before about 55 in male relatives or 65 in female relatives)</li>
+<li>Anyone with a personal history of heart disease, stroke, or peripheral artery disease</li>
+<li>Anyone whose cholesterol runs high despite a healthy diet and regular exercise</li>
+<li>Anyone whose overall heart disease risk is unclear after a standard lipid panel</li>
+</ul>
+<p style="margin-top:15px;">A major update to the national cholesterol management guideline recommends that <strong>every adult have Lp(a) checked at least once</strong>, regardless of family history, since it is common and often goes undetected by routine testing alone.</p>
+</div>
+<div class="focus-panel">
+<h3>Understanding your results</h3>
+<p>Lab reports use different units and reference ranges, and the "right" target depends on your overall risk profile — your clinician is best positioned to interpret your specific numbers. As general reference points:</p>
+<ul>
+<li><strong>Lp(a):</strong> current national guidance treats a level at or above roughly 125 nmol/L (about 50 mg/dL) as a risk-enhancing factor that supports more attention to your other heart disease risk factors.</li>
+<li><strong>ApoB:</strong> professional groups suggest lower targets for people at higher overall cardiovascular risk — generally somewhere in the range of 90 mg/dL down to 60–65 mg/dL depending on your individual risk category.</li>
 </ul>
 </div>
-<div class="svc">
-<div class="eyebrow">02 — Diagnostics</div>
-<h3>Lab &amp; Diagnostic Suite</h3>
-<p>A full on-site laboratory and diagnostic suite at our Elizabethtown main office, for fast, coordinated results.</p>
-<ul>
-<li>On-site laboratory testing</li>
-<li>Diagnostic imaging support</li>
-<li>Results delivered via patient portal</li>
-</ul>
+<div class="warning-box">
+<h3>What can — and can't — be changed</h3>
+<p><strong>Lp(a)</strong> is mostly determined by genetics, so diet and exercise won't meaningfully lower it, and it isn't significantly affected by statins. Knowing it's elevated is still useful: it helps your clinician manage the risk factors that <em>are</em> modifiable — blood pressure, LDL cholesterol, smoking, and diabetes — more aggressively. Newer Lp(a)-lowering medications are currently being studied in clinical trials.</p>
+<p style="margin-top:12px;"><strong>ApoB</strong>, by contrast, generally moves together with LDL cholesterol — statins, other lipid-lowering medications, and lifestyle changes such as diet, exercise, and weight management that lower LDL typically lower ApoB as well.</p>
 </div>
-<div class="svc">
-<div class="eyebrow">03 — New</div>
-<h3>Mental Health Care</h3>
-<p>Compassionate psychiatric and mental health support, integrated with your primary care.</p>
-<ul>
-<li>Psychiatric evaluation</li>
-<li>Ongoing mental health management</li>
-<li>Care coordinated with your primary clinician</li>
-</ul>
-</div>
-</div>
-<div class="svc-list">
-<div class="eyebrow">Full list</div>
-<h3>Services provided</h3>
-<div class="svc-tags">
-<span>Acute care</span>
-<span>Urgent care</span>
-<span>Telehealth visits</span>
-<span>Comprehensive primary care</span>
-<span>Wellness exams</span>
-<span>Cancer screening</span>
-<span>Vaccinations</span>
-<span>Skin biopsies</span>
-<span>Minor surgery</span>
-<span>Diagnostic tests</span>
-<span>Laboratory services</span>
-<span>Chronic care management</span>
-<span>Advanced primary care management</span>
-<span>Remote physiological monitoring</span>
-<span>Management of substance use disorder</span>
-<span>Mental health medication management &amp; counseling</span>
-<span>Medical cannabis evaluation</span>
-<span>Hospital services at Baptist Health Hardin &amp; Encompass Health Hospital</span>
-</div>
-</div>
+<p class="source-note"><strong>Sources:</strong> 2026 ACC/AHA Guideline on the Management of Dyslipidemia and National Lipid Association expert consensus on apolipoprotein B. This information is educational and does not replace an individual medical evaluation — ask your Central Medical Associates clinician whether Lp(a) or ApoB testing is right for you.</p>
 </div>
 </section>
 </main>
@@ -1655,7 +1580,7 @@
 <div class="foot-grid">
 <div>
 <div class="foot-brand">Central Medical Associates</div>
-<p style="font-style:italic; color:#B8B8B8; margin-bottom:10px;">Patients are central to our mission.</p>
+<p style="font-style:italic; color:var(--gold-light); margin-bottom:10px;">Patients are central to our mission.</p>
 <p style="max-width:280px;">An independent, physician-led primary care practice serving Elizabethtown and Radcliff, Kentucky, since 2016.</p>
 </div>
 <div>

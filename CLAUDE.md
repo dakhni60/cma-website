@@ -23,6 +23,8 @@ no templating** — each `.html` file is a complete, standalone document with it
   cardiovascular risk calculator, an external link to tools.acc.org)
 - `heat-exhaustion.html` — current seasonal "Focus On" deep-dive
 - `tick-bites.html` — previous seasonal "Focus On" deep-dive
+- `lipoprotein-a-apob.html` — patient-facing "Focus On" topic (not seasonal): Lp(a) and
+  ApoB cholesterol markers
 
 Every page shares the same header (top-bar, nav, announcement bar) and footer, copy-pasted
 into each file — **there is no shared include/template**. About and Services are the only
