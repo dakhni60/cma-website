@@ -19,6 +19,8 @@ no templating** — each `.html` file is a complete, standalone document with it
 - `health-library.html` — patient-education articles
 - `news.html` — announcements
 - `billing.html` — payment policies
+- `for-clinicians.html` — clinical resources for healthcare professionals (e.g. ACC PREVENT
+  cardiovascular risk calculator, an external link to tools.acc.org)
 - `heat-exhaustion.html` — current seasonal "Focus On" deep-dive
 - `tick-bites.html` — previous seasonal "Focus On" deep-dive
 

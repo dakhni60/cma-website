@@ -43,6 +43,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://cmahardin.com/for-clinicians.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://cmahardin.com/heat-exhaustion.html</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
