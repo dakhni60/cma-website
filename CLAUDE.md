@@ -25,6 +25,8 @@ no templating** — each `.html` file is a complete, standalone document with it
 - `tick-bites.html` — previous seasonal "Focus On" deep-dive
 - `lipoprotein-a-apob.html` — patient-facing "Focus On" topic (not seasonal): Lp(a) and
   ApoB cholesterol markers
+- `privacy-policy.html` — website privacy policy (what the site collects/uses; clarifies
+  medical records/PHI are governed separately by the HIPAA Notice of Privacy Practices)
 
 Every page shares the same header (top-bar, nav, announcement bar) and footer, copy-pasted
 into each file — **there is no shared include/template**. About and Services are the only
@@ -38,12 +40,12 @@ differently-named file (or update it in place) and repoint the dropdown + "Curre
 
 1. Edit the relevant `.html` file directly (content is plain HTML; CSS is in that file's
    `<style>` block). **If the edit touches the shared header, nav, footer, or the JS at the
-   bottom, apply it to all 9 files** — grep for the string you're changing across `*.html` to
+   bottom, apply it to all 12 files** — grep for the string you're changing across `*.html` to
    find every copy.
 2. Commit and push to `main`. GitHub Pages redeploys automatically — verify at the live URL
    about a minute later. There is no build command; what you push is what serves.
 3. Preview locally with `python3 -m http.server 8000` and open http://localhost:8000.
-4. If you add, rename, or remove a page, update the nav on all 9 pages, `sitemap.xml`, and
+4. If you add, rename, or remove a page, update the nav on all 12 pages, `sitemap.xml`, and
    the page list above.
 
 ## Common tasks
@@ -53,10 +55,10 @@ differently-named file (or update it in place) and repoint the dropdown + "Curre
 - **Add a news post**: copy an existing `<div class="post-card">` in `news.html`.
 - **Add a health article**: copy an `<div class="article-card">` in `health-library.html`.
 - **Change the announcement bar**: edit `.announce-text` near the top of `<body>` — on all
-  9 pages.
+  12 pages.
 - **Add a "Focus On" topic**: copy an existing focus page (e.g. `heat-exhaustion.html`) to a
   new filename, update its content, then update the nav dropdown links and kickers
-  ("Current feature" / "Previous topic") on all 9 pages, and add the new file to `sitemap.xml`.
+  ("Current feature" / "Previous topic") on all 12 pages, and add the new file to `sitemap.xml`.
 - **Photos**: optimized JPEGs in `assets/img/providers/` (~700px) and `assets/img/locations/`
   (~1200px). Compress before adding (`sips -s format jpeg -s formatOptions 80 -Z 700 in.png --out out.jpg`).
   Never inline images as base64.
