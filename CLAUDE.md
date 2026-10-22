@@ -21,7 +21,8 @@ no templating** — each `.html` file is a complete, standalone document with it
 - `billing.html` — payment policies
 - `for-clinicians.html` — clinical resources for healthcare professionals (e.g. ACC PREVENT
   cardiovascular risk calculator, an external link to tools.acc.org)
-- `heat-exhaustion.html` — current seasonal "Focus On" deep-dive
+- `heat-exhaustion.html` — current "Focus On" deep-dive (filename is legacy; content is
+  Colorectal Cancer Screening, not seasonal — see note below)
 - `tick-bites.html` — previous seasonal "Focus On" deep-dive
 - `lipoprotein-a-apob.html` — patient-facing "Focus On" topic (not seasonal): Lp(a) and
   ApoB cholesterol markers
@@ -36,7 +37,10 @@ sections that still live on a single page and are linked to via anchor (`index.h
 everything else is a real page. The nav's "Focus On…" item is a dropdown pointing at whichever
 files are the current/previous topics — when the season changes, retire the old topic to a
 differently-named file (or update it in place) and repoint the dropdown + "Current feature" /
-"Previous topic" kickers.
+"Previous topic" kickers. Note: `heat-exhaustion.html` was updated in place with a non-seasonal
+topic (Colorectal Cancer Screening) — its filename and canonical URL are now stale relative to
+its content; rename the file (and update all referencing links/canonical/sitemap) next time
+this topic is retired, rather than leaving the mismatch to compound.
 
 ## How to make edits
 
