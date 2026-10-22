@@ -105,36 +105,6 @@
     display:inline-block;
   }
 
-  /* ---------- TOP PHONE BAR ---------- */
-  .top-bar{
-    background: var(--pine);
-  }
-  .top-bar-inner{
-    max-width: var(--max); margin:0 auto; padding: 7px 32px;
-    display:flex; align-items:center; justify-content:flex-end;
-  }
-  .top-bar-phone{
-    display:flex; align-items:center; gap:7px;
-    color: var(--white) !important;
-    text-decoration:none;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:19px;
-    font-weight:600;
-    letter-spacing:0.02em;
-  }
-  .top-bar-phone:hover{ color: var(--gold-light) !important; text-decoration:underline; }
-  .top-bar-phone-label{
-    font-family:'Source Sans 3',sans-serif;
-    text-transform:uppercase;
-    font-size:10.5px;
-    font-weight:600;
-    letter-spacing:.08em;
-    color: rgba(255,255,255,.78);
-  }
-  @media (max-width:560px){
-    .top-bar-inner{padding:7px 20px; justify-content:center;}
-  }
-
   /* ---------- NAV ---------- */
   header{
     position:sticky; top:0; z-index:50;
@@ -1450,11 +1420,6 @@
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<div class="top-bar">
-<div class="wrap top-bar-inner">
-<a aria-label="Call Central Medical Associates at 270-600-1109" class="top-bar-phone" href="tel:+12706001109"><span class="top-bar-phone-label">Call us</span> 270-600-1109</a>
-</div>
-</div>
 <header>
 <div class="nav-inner">
 <a aria-label="Central Medical Associates home" class="brand" href="index.html">
