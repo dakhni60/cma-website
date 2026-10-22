@@ -34,6 +34,9 @@ no templating** — each `.html` file is a complete, standalone document with it
   to `colorectal-cancer-screening.html`, kept so old links/bookmarks to the former URL still
   resolve. Not in `sitemap.xml`; don't repurpose it for new content — give new topics a fresh
   filename instead.
+- `404.html` — **not a content page**: GitHub Pages serves it for any missing URL. It uses
+  root-relative links (`/locations.html`) so it works at any depth, carries `noindex`, and is
+  not in `sitemap.xml`. Keep its header/footer in sync with the others like any page.
 
 Every page shares the same header (top-bar, nav, announcement bar) and footer, copy-pasted
 into each file — **there is no shared include/template**. About and Services are the only
@@ -95,6 +98,9 @@ and update all referencing links, canonical/og URLs, the BreadcrumbList item, an
 - Patient portal (HEALOW): https://mycw104.ecwcloud.com/portal14112/jsp/login.jsp
 - Founded 2016 (merger of the practices of Drs. Movania, Ahmed, Quadri, Nasir).
 - Hours: Mon–Fri 8:00 AM – 5:00 PM. All insurances accepted; new patients welcome.
+- The `application/ld+json` business data in each page's `<head>` repeats these phones,
+  addresses, and hours for search engines. If any of them change, update it on every page too.
+  It deliberately has no top-level phone number (the old 270-600-1109 was retired).
 
 ## Content cautions
 
