@@ -21,8 +21,8 @@ no templating** — each `.html` file is a complete, standalone document with it
 - `billing.html` — payment policies
 - `for-clinicians.html` — clinical resources for healthcare professionals (e.g. ACC PREVENT
   cardiovascular risk calculator, an external link to tools.acc.org)
-- `heat-exhaustion.html` — current "Focus On" deep-dive (filename is legacy; content is
-  Colorectal Cancer Screening, not seasonal — see note below)
+- `colorectal-cancer-screening.html` — current "Focus On" deep-dive (not seasonal): screening
+  options and guidelines for colorectal cancer
 - `tick-bites.html` — previous seasonal "Focus On" deep-dive
 - `lipoprotein-a-apob.html` — patient-facing "Focus On" topic (not seasonal): Lp(a) and
   ApoB cholesterol markers
@@ -30,6 +30,10 @@ no templating** — each `.html` file is a complete, standalone document with it
   medical records/PHI are governed separately by the HIPAA Notice of Privacy Practices)
 - `terms-and-conditions.html` — website terms + SMS text messaging program terms (10DLC
   compliance: opt-in, message frequency, STOP/HELP, carrier liability)
+- `heat-exhaustion.html` — **not a content page**: a thin meta-refresh/canonical redirect stub
+  to `colorectal-cancer-screening.html`, kept so old links/bookmarks to the former URL still
+  resolve. Not in `sitemap.xml`; don't repurpose it for new content — give new topics a fresh
+  filename instead.
 
 Every page shares the same header (top-bar, nav, announcement bar) and footer, copy-pasted
 into each file — **there is no shared include/template**. About and Services are the only
@@ -37,10 +41,10 @@ sections that still live on a single page and are linked to via anchor (`index.h
 everything else is a real page. The nav's "Focus On…" item is a dropdown pointing at whichever
 files are the current/previous topics — when the season changes, retire the old topic to a
 differently-named file (or update it in place) and repoint the dropdown + "Current feature" /
-"Previous topic" kickers. Note: `heat-exhaustion.html` was updated in place with a non-seasonal
-topic (Colorectal Cancer Screening) — its filename and canonical URL are now stale relative to
-its content; rename the file (and update all referencing links/canonical/sitemap) next time
-this topic is retired, rather than leaving the mismatch to compound.
+"Previous topic" kickers. If a topic's new content doesn't match its old filename (as happened
+when `heat-exhaustion.html` became `colorectal-cancer-screening.html`), rename the file to match
+and update all referencing links, canonical/og URLs, the BreadcrumbList item, and `sitemap.xml`
+— don't leave a stale filename/content mismatch in place.
 
 ## How to make edits
 
@@ -62,8 +66,8 @@ this topic is retired, rather than leaving the mismatch to compound.
 - **Add a health article**: copy an `<div class="article-card">` in `health-library.html`.
 - **Change the announcement bar**: edit `.announce-text` near the top of `<body>` — on all
   13 pages.
-- **Add a "Focus On" topic**: copy an existing focus page (e.g. `heat-exhaustion.html`) to a
-  new filename, update its content, then update the nav dropdown links and kickers
+- **Add a "Focus On" topic**: copy an existing focus page (e.g. `colorectal-cancer-screening.html`)
+  to a new filename, update its content, then update the nav dropdown links and kickers
   ("Current feature" / "Previous topic") on all 13 pages, and add the new file to `sitemap.xml`.
 - **Photos**: optimized JPEGs in `assets/img/providers/` (~700px) and `assets/img/locations/`
   (~1200px). Compress before adding (`sips -s format jpeg -s formatOptions 80 -Z 700 in.png --out out.jpg`).
